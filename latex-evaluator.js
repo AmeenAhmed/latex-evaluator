@@ -159,3 +159,16 @@ export function parse (latex) {
   const fn = new Function (`return ${expression};`);
   return fn;
 }
+
+export function evaluateAndCompare (latex1, latex2) {
+  const variables = {};
+  for(let i=0; i<26; i++) {
+    variables[String.fromCharCode('a'.charCodeAt(0) + i)] = Math.floor(Math.random() * 10);
+  }
+  const latexEval1 = parse(latex1);
+  const latex1Result = latexEval1(variables);
+  const latexEval2 = parse(latex2);
+  const latex2Result = latexEval2(variables);
+
+  return latex1Result === latex2Result;
+}
