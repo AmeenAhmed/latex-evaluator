@@ -1,8 +1,7 @@
 {
   "name": "latex-evaluator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Library to parse latex and create an evaluation function.",
-  "type": "module",
   "main": "latex-evaluator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
