@@ -151,7 +151,7 @@ function parseExpression (chars) {
   return exp;
 }
 
-export function parse (latex) {
+function parse (latex) {
   latex = latex.replace(/\s/g, '').replace(/\\\\left/g, '').replace(/\\\\right/g, '');
   const chars = latex.split('');
   const expression = parseExpression(chars);
@@ -160,7 +160,7 @@ export function parse (latex) {
   return fn;
 }
 
-export function evaluateAndCompare (latex1, latex2) {
+function evaluateAndCompare (latex1, latex2) {
   const variables = {};
   for(let i=0; i<26; i++) {
     variables[String.fromCharCode('a'.charCodeAt(0) + i)] = Math.floor(Math.random() * 10);
@@ -172,3 +172,5 @@ export function evaluateAndCompare (latex1, latex2) {
 
   return latex1Result === latex2Result;
 }
+
+module.exports = evaluateAndCompare;

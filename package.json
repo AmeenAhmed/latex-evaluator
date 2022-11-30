@@ -1,6 +1,6 @@
 {
   "name": "latex-evaluator",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Library to parse latex and create an evaluation function.",
   "main": "latex-evaluator.js",
   "scripts": {
